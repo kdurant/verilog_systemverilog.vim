@@ -38,12 +38,12 @@ syn keyword verilogStatement   endprimitive endtable
 syn keyword verilogStatement   event force fork join
 syn keyword verilogStatement   join_any join_none forkjoin
 syn keyword verilogStatement   generate genvar highz0 highz1 ifnone
-syn keyword verilogStatement   incdir include initial inout input
+syn keyword verilogStatement   incdir include initial
 syn keyword verilogStatement   instance integer large liblist
 syn keyword verilogStatement   library localparam macromodule medium
 syn keyword verilogStatement   nand negedge nmos nor
 syn keyword verilogStatement   noshowcancelled not notif0 notif1 or
-syn keyword verilogStatement   output parameter pmos posedge primitive
+syn keyword verilogStatement   parameter pmos posedge primitive
 syn keyword verilogStatement   pull0 pull1 pulldown pullup
 syn keyword verilogStatement   pulsestyle_onevent pulsestyle_ondetect
 syn keyword verilogStatement   rcmos real realtime reg release
@@ -92,12 +92,12 @@ syn keyword verilogStatement   s_always s_eventually s_nexttime s_until s_until_
 syn keyword verilogStatement   strong sync_accept_on sync_reject_on unique unique0
 syn keyword verilogStatement   until until_with untyped weak
 
-syn keyword verilogTypeDef     enum
+syn keyword verilogTypeDef     enum 
 
-syn keyword verilogConditional iff
+syn keyword verilogConditional iff output
 syn keyword verilogConditional if else case casex casez default endcase
 
-syn keyword verilogRepeat      forever repeat while for
+syn keyword verilogRepeat      forever repeat while for inout
 syn keyword verilogRepeat      return break continue
 syn keyword verilogRepeat      do while foreach
 
@@ -136,7 +136,7 @@ else
     syn match   verilogLabel   "\(\<\(begin\|end\)\>\s*:\s*\)\@<=\<\k\+\>"
 endif
 
-syn keyword verilogObject      super null this
+syn keyword verilogObject      super null this  input
 syn match   verilogObject      "\<\w\+\ze\(::\|\.\)" contains=verilogNumber
 
 
