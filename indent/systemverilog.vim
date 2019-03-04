@@ -357,7 +357,8 @@ function! s:GetContextIndent()
     endif
 
     if l:line =~ s:vlog_module
-      return s:GetContextStartIndent("module"    , l:lnum) + l:open_offset
+      "return s:GetContextStartIndent("module"    , l:lnum) + l:open_offset
+      return 0
     elseif l:line =~ s:vlog_interface
       return s:GetContextStartIndent("interface" , l:lnum) + l:open_offset
     elseif l:line =~ s:vlog_class
